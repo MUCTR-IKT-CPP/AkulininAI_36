@@ -113,10 +113,6 @@ void secondary_diagonal(int** array, int N) {
  */
 void spiral(int** array, int N) {
     cout << "A matrix with elements whose values ​​are twisted clockwise in a spiral:" << endl;
-    vector<int> elements;
-    for (unsigned i = 0; i < N; i++)
-        for (unsigned j = 0; j < N; j++)
-            elements.push_back(array[i][j]);
 
     int top = 0, left = 0, right = N - 1, bottom = N - 1;
     int** spiralMatrix = new int* [N];
