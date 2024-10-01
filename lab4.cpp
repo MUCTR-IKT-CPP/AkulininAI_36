@@ -7,14 +7,14 @@
 
 using namespace std;
 
-// Общий класс Skill, представляющий навык
+// ГЋГЎГ№ГЁГ© ГЄГ«Г Г±Г± Skill, ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г­Г ГўГ»ГЄ
 class Skill {
 public:
     string name;
     Skill(string n) : name(n) {}
 };
 
-// Инициализация глобального вектора навыков
+// Г€Г­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї ГЈГ«Г®ГЎГ Г«ГјГ­Г®ГЈГ® ГўГҐГЄГІГ®Г°Г  Г­Г ГўГ»ГЄГ®Гў
 vector<Skill> available_skills = {
     Skill("Flame Strike"),
     Skill("Ice Thrust"),
@@ -24,7 +24,7 @@ vector<Skill> available_skills = {
     Skill("Wind Slash")
 };
 
-// Класс Spear (Копье), представляющий копье в игре
+// ГЉГ«Г Г±Г± Spear (ГЉГ®ГЇГјГҐ), ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© ГЄГ®ГЇГјГҐ Гў ГЁГЈГ°ГҐ
 class Spear {
 public:
     int damage;
@@ -43,7 +43,7 @@ public:
         durability = (rarity == "Common") ? rand() % 20 + 30 : (rarity == "Rare") ? rand() % 30 + 50 : rand() % 50 + 80;
         attack_speed = (rarity == "Common") ? (rand() % 5 + 5) / 10.0f : (rarity == "Rare") ? (rand() % 3 + 6) / 10.0f : (rand() % 2 + 8) / 10.0f;
 
-        // Определение навыков
+        // ГЋГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ Г­Г ГўГ»ГЄГ®Гў
         set_skills();
     }
 
@@ -63,7 +63,7 @@ public:
     }
 };
 
-// Класс Sword (Меч), представляющий меч в игре
+// ГЉГ«Г Г±Г± Sword (ГЊГҐГ·), ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г¬ГҐГ· Гў ГЁГЈГ°ГҐ
 class Sword {
 public:
     int damage;
@@ -82,7 +82,7 @@ public:
         durability = (rarity == "Common") ? rand() % 25 + 25 : (rarity == "Rare") ? rand() % 20 + 50 : rand() % 30 + 90;
         attack_speed = (rarity == "Common") ? (rand() % 5 + 5) / 10.0f : (rarity == "Rare") ? (rand() % 4 + 5) / 10.0f : (rand() % 2 + 7) / 10.0f;
 
-        // Определение навыков
+        // ГЋГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ Г­Г ГўГ»ГЄГ®Гў
         set_skills();
     }
 
@@ -102,7 +102,7 @@ public:
     }
 };
 
-// Класс Bow (Лук), представляющий лук в игре
+// ГЉГ«Г Г±Г± Bow (Г‹ГіГЄ), ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г«ГіГЄ Гў ГЁГЈГ°ГҐ
 class Bow {
 public:
     int damage;
@@ -121,7 +121,7 @@ public:
         durability = (rarity == "Common") ? rand() % 25 + 25 : (rarity == "Rare") ? rand() % 20 + 50 : rand() % 30 + 90;
         attack_speed = (rarity == "Common") ? (rand() % 5 + 5) / 10.0f : (rarity == "Rare") ? (rand() % 4 + 5) / 10.0f : (rand() % 2 + 7) / 10.0f;
 
-        // Определение навыков
+        // ГЋГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ Г­Г ГўГ»ГЄГ®Гў
         set_skills();
     }
 
@@ -141,7 +141,7 @@ public:
     }
 };
 
-// Класс Weapon (Оружие), представляющий оружие в магазине
+// ГЉГ«Г Г±Г± Weapon (ГЋГ°ГіГ¦ГЁГҐ), ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г®Г°ГіГ¦ГЁГҐ Гў Г¬Г ГЈГ Г§ГЁГ­ГҐ
 class Weapon {
 public:
     void* weaponPtr;
@@ -164,7 +164,7 @@ public:
             type = "Bow";
             break;
         default:
-            cout << "Неверный тип оружия." << endl;
+            cout << "ГЌГҐГўГҐГ°Г­Г»Г© ГІГЁГЇ Г®Г°ГіГ¦ГЁГї." << endl;
             return;
         }
     }
@@ -209,7 +209,7 @@ public:
         cout << "Rarity: " << rarity << endl;
         cout << "Skills: ";
         if (skills.empty()) {
-            cout << "Нет" << endl;
+            cout << "ГЌГҐГІ" << endl;
         }
         else {
             for (const auto& skill : skills) {
@@ -217,7 +217,7 @@ public:
             }
             cout << endl;
         }
-        cout << "Визуализация навыков: ";
+        cout << "Г‚ГЁГ§ГіГ Г«ГЁГ§Г Г¶ГЁГї Г­Г ГўГ»ГЄГ®Гў: ";
         for (const auto& skill : skills) {
             cout << "*" << skill << "* ";
         }
@@ -225,7 +225,7 @@ public:
     }
 };
 
-// Класс Shop (Магазин), представляющий магазин оружия
+// ГЉГ«Г Г±Г± Shop (ГЊГ ГЈГ Г§ГЁГ­), ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г¬Г ГЈГ Г§ГЁГ­ Г®Г°ГіГ¦ГЁГї
 class Shop {
 public:
     vector<Weapon> weapons;
@@ -263,7 +263,7 @@ public:
                 int price = weapon.get_price();
                 if (price < budget) {
                     weapon.print_info();
-                    cout << "Цена: " << price << endl;
+                    cout << "Г–ГҐГ­Г : " << price << endl;
                     cout << "--------------------------------" << endl;
                 }
             }
@@ -280,34 +280,34 @@ public:
     void visit_shop() {
         int weapon_type, budget;
 
-        cout << "Добро пожаловать в магазин оружия" << endl;
-        cout << "Введите тип необходимого вам оружия (1 - Копье, 2 - Меч, 3 - Лук): ";
+        cout << "Г„Г®ГЎГ°Г® ГЇГ®Г¦Г Г«Г®ГўГ ГІГј Гў Г¬Г ГЈГ Г§ГЁГ­ Г®Г°ГіГ¦ГЁГї" << endl;
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГІГЁГЇ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г®ГЈГ® ГўГ Г¬ Г®Г°ГіГ¦ГЁГї (1 - ГЉГ®ГЇГјГҐ, 2 - ГЊГҐГ·, 3 - Г‹ГіГЄ): ";
         cin >> weapon_type;
 
-        cout << "Введите ваш бюджет на оружие: ";
+        cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГўГ Гё ГЎГѕГ¤Г¦ГҐГІ Г­Г  Г®Г°ГіГ¦ГЁГҐ: ";
         cin >> budget;
 
-        cout << "Вы ищете ";
+        cout << "Г‚Г» ГЁГ№ГҐГІГҐ ";
 
         switch (weapon_type) {
         case 1:
-            cout << "Копье" << endl;
+            cout << "ГЉГ®ГЇГјГҐ" << endl;
             break;
         case 2:
-            cout << "Меч" << endl;
+            cout << "ГЊГҐГ·" << endl;
             break;
         case 3:
-            cout << "Лук" << endl;
+            cout << "Г‹ГіГЄ" << endl;
             break;
         default:
-            cout << "Неверный тип оружия." << endl;
+            cout << "ГЌГҐГўГҐГ°Г­Г»Г© ГІГЁГЇ Г®Г°ГіГ¦ГЁГї." << endl;
             return;
         }
 
-        cout << "Вот доступное оружие в рамках вашего бюджета:" << endl;
+        cout << "Г‚Г®ГІ Г¤Г®Г±ГІГіГЇГ­Г®ГҐ Г®Г°ГіГ¦ГЁГҐ Гў Г°Г Г¬ГЄГ Гµ ГўГ ГёГҐГЈГ® ГЎГѕГ¤Г¦ГҐГІГ :" << endl;
         print_weapons(weapon_type, budget);
 
-        cout << "Спасибо, приходите еще!" << endl;
+        cout << "Г‘ГЇГ Г±ГЁГЎГ®, ГЇГ°ГЁГµГ®Г¤ГЁГІГҐ ГҐГ№ГҐ!" << endl;
     }
 };
 
@@ -322,15 +322,15 @@ int main() {
     myShop.visit_shop();
 
     char choice;
-    cout << "Хотите увидеть весь ассортимент оружия? (y/n): ";
+    cout << "Г•Г®ГІГЁГІГҐ ГіГўГЁГ¤ГҐГІГј ГўГҐГ±Гј Г Г±Г±Г®Г°ГІГЁГ¬ГҐГ­ГІ Г®Г°ГіГ¦ГЁГї? (y/n): ";
     cin >> choice;
 
     if (choice == 'y' || choice == 'Y') {
-        cout << "Вот весь ассортимент оружия:" << endl;
+        cout << "Г‚Г®ГІ ГўГҐГ±Гј Г Г±Г±Г®Г°ГІГЁГ¬ГҐГ­ГІ Г®Г°ГіГ¦ГЁГї:" << endl;
         myShop.print_all_weapons();
     }
     else {
-        cout << "Спасибо за ваше время!" << endl;
+        cout << "Г‘ГЇГ Г±ГЁГЎГ® Г§Г  ГўГ ГёГҐ ГўГ°ГҐГ¬Гї!" << endl;
     }
 
     return 0;
